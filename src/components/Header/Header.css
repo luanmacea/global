@@ -1,0 +1,31 @@
+.login {
+  background-color: aqua;
+  border-radius: 9px;
+  outline: 2px black;
+  border: 1px solid  #D4D2E3;
+  margin: 5px;
+}
+.signIn{
+  background-color: white;
+  border-radius: 9px;
+  border: 1px solid  #D4D2E3;
+  margin: 5px;
+}
+.paginas{
+  align-items: center;
+  justify-content: center;
+}
+
+.div_paginas{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+}
+
+.teste{
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+}
