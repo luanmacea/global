@@ -1,26 +1,10 @@
-.login {
-  background-color: aqua;
-  border-radius: 9px;
-  outline: 2px black;
-  border: 1px solid  #D4D2E3;
-  margin: 5px;
-}
-.signIn{
-  background-color: white;
-  border-radius: 9px;
-  border: 1px solid  #D4D2E3;
-  margin: 5px;
+.header{
+  margin: 10px;
+  text-align: center;
 }
 .paginas{
   align-items: center;
   justify-content: center;
-}
-
-.div_paginas{
-  display: flex;
-  flex-direction: row;
-  position: relative;
-
 }
 
 .teste{
@@ -28,4 +12,9 @@
   align-self: center;
   justify-content: center;
   align-items: center;
+}
+.logo{
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
 }

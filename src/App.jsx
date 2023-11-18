@@ -6,6 +6,7 @@ import "./App.css";
 import Home from "./components/Home/Home";
 import Header from "./components/Header/Header";
 import About from "./components/About/About";
+import Footer from "./components/Footer/Footer";
 
 const HomePage = () => {
   <>
@@ -16,15 +17,10 @@ const HomePage = () => {
 
 function App() {
   return (
-    // <Router>
     <div>
       <Header />
-      {/* <Home />
-      <About /> */}
       <Outlet />
-      <Routes>
-        <Route path="/" Component={HomePage} />
-      </Routes>
+      <Footer />
     </div>
   );
 }

@@ -1,6 +1,14 @@
-.jumbotron{
-  margin: 20px;
-  background-color: black;
+.jumbotron {
   color: #fff;
+  font-weight: 700;
   border-radius: 30px;
+  background-image: url("../../assets/Home/SalaFundo2.png");
+}
+.titulo {
+  font-weight: bold;
+  font-size: 40px;
+}
+.descricao {
+  font-size: 20px;
+  font-weight: 300;
 }

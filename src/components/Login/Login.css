@@ -1,0 +1,12 @@
+.login {
+  background-color: white;
+  border-radius: 9px;
+  outline: 2px black;
+  border: 1px solid #d4d2e3;
+  padding: 20px;
+}
+.formulario {
+  background-color: #ececec;
+  border-width: 1px;
+  border-color: black;
+}
