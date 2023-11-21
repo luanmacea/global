@@ -113,7 +113,6 @@ export default function SignIn() {
             type="text"
             className="form-control me-5 mb-2"
             style={{ width: "100%" }}
-            // id="formGroupExampleInput"
             placeholder="Digite seu Nome"
             value={nome}
             onChange={(e) => setNome(e.target.value)}
@@ -126,7 +125,6 @@ export default function SignIn() {
           <input
             type="text"
             className="form-control me-5 mb-2"
-            // id="formGroupExampleInput2"
             placeholder="Digite sua Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
