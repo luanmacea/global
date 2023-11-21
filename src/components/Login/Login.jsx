@@ -41,7 +41,6 @@ export default function Login() {
           <label
             htmlFor="formGroupExampleInput2"
             className="form-label"
-            onClick={console.log("teste")}
           >
             Não possui cadastro?
             <a href="signIn"> Clique aqui</a>

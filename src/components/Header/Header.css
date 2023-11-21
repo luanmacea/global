@@ -21,15 +21,15 @@
 .TextLogin{
   background-color: rgb(0, 195, 255);
   outline: auto;
-  text-decoration: none;
+  margin: 5px 3px;
   border-radius: 9px;
   font-size: 18px;
-  margin-right: 5px;
 }
 
 .TextSignIn{
   background-color: rgb(250, 255, 224);
   outline: auto;
+  margin: 5px 3px;
   border-radius: 9px;
   font-size: 18px;
 }
