@@ -16,18 +16,28 @@ export default function Header() {
             MedSync
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar.Collapse
+            className="justify-content-center"
+            id="basic-navbar-nav"
+          >
             <Nav className="ms-auto">
-              <Nav.Link className="paginas" href="/">
+              <Nav.Link className="" href="/">
                 Home
               </Nav.Link>
-              <Nav.Link className="paginas" href="about">
-                Sobre
+              <Nav.Link className="" href="about">
+                Sobre nós
               </Nav.Link>
-              <Nav.Link className="" href="login">
+            </Nav>
+          </Navbar.Collapse>
+          <Navbar.Collapse
+            className="justify-content-end"
+            id="basic-navbar-nav"
+          >
+            <Nav className="">
+              <Nav.Link className="TextLogin" href="login">
                 Login
               </Nav.Link>
-              <Nav.Link className="" href="signIn">
+              <Nav.Link className="TextSignIn" href="signIn">
                 SignIn
               </Nav.Link>
             </Nav>

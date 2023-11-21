@@ -12,16 +12,16 @@ export default function SignIn() {
         flexDirection: "column",
       }}
     >
-      <h1>Cadastro</h1>
-      <form className="formulario login">
+      <h1 className="text-center fw-bolder mb-4">Cadastro</h1>
+      <form className="formulario login ">
         <div className="mb-1">
           <label htmlFor="formGroupExampleInput" className="form-label">
             Nome:
           </label>
           <input
             type="text"
-            className="form-control"
-            style={{ width: "300px" }}
+            className="form-control me-5 mb-2"
+            style={{ width: "100%" }}
             id="formGroupExampleInput"
             placeholder="Digite seu Nome"
           />
@@ -32,7 +32,7 @@ export default function SignIn() {
           </label>
           <input
             type="password"
-            className="form-control"
+            className="form-control me-5 mb-2"
             id="formGroupExampleInput2"
             placeholder="Digite sua Email"
           />
@@ -43,8 +43,8 @@ export default function SignIn() {
           </label>
           <input
             type="text"
-            className="form-control"
-            style={{ width: "300px" }}
+            className="form-control me-5 mb-2"
+            style={{ width: "100%" }}
             id="formGroupExampleInput"
             placeholder="Digite seu Telefone"
           />
@@ -55,8 +55,8 @@ export default function SignIn() {
           </label>
           <input
             type="text"
-            className="form-control"
-            style={{ width: "300px" }}
+            className="form-control me-5 mb-2"
+            style={{ width: "100%" }}
             id="formGroupExampleInput"
             placeholder="Digite sua Senha"
           />
@@ -67,8 +67,8 @@ export default function SignIn() {
           </label>
           <input
             type="text"
-            className="form-control"
-            style={{ width: "300px" }}
+            className="form-control me-5 mb-3"
+            style={{ width: "100%" }}
             id="formGroupExampleInput"
             placeholder="Confirme sua Senha"
           />

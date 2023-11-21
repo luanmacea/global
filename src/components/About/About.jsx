@@ -3,44 +3,58 @@ import "./About.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
+import Luan from "../../assets/About/Luan.png";
+
 export default function About() {
   return (
-    <div className="card_container">
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
-        <Card.Body>
-          <Card.Title>about</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
-        </Card.Body>
-      </Card>
+    <div>
+      <h1 className="text-center fw-bolder mb-4">Conheça nosso time</h1>
+      <p
+        className="text-center"
+        style={{ maxWidth: "500px", margin: "0 auto", fontSize: "18px" }}
+      >
+        Quem é a equipe maravilhosa por tras desse projeto que pode ajudar a
+        salvar milhares de vidas?
+      </p>
+      <div className="card_container">
+        <Card className="card m-4" style={{ width: "18rem" }}>
+          <Card.Body>
+            <div className="d-flex align-items-center">
+              <Card.Img
+                className="img w-25 h-25 p-1"
+                variant="top"
+                src={Luan}
+              />
+              <Card.Title className="ms-3">Luan Macea</Card.Title>
+            </div>
+            <Card.Text className="text p-1">
+              Oi, tenho 19 anos e meu nome é Luan. Estou atualmente cursando
+              Engenharia de Software e estou ansioso para aprender mais nesse
+              campo fascinante da tecnologia.
+            </Card.Text>
+            <Button variant="primary">Go somewhere</Button>
+          </Card.Body>
+        </Card>
 
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
-        <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
-        </Card.Body>
-      </Card>
-
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
-        <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
-        </Card.Body>
-      </Card>
+        <Card className="card m-4" style={{ width: "18rem" }}>
+          <Card.Body>
+            <div className="d-flex align-items-center">
+              <Card.Img
+                className="img w-25 h-25 p-1"
+                variant="top"
+                src={Luan}
+              />
+              <Card.Title className="ms-3">Luan Macea</Card.Title>
+            </div>
+            <Card.Text className="text p-1">
+              Oi, tenho 19 anos e meu nome é Luan. Estou atualmente cursando
+              Engenharia de Software e estou ansioso para aprender mais nesse
+              campo fascinante da tecnologia.
+            </Card.Text>
+            <Button variant="primary">Go somewhere</Button>
+          </Card.Body>
+        </Card>
+      </div>
     </div>
   );
 }

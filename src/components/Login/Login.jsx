@@ -12,7 +12,7 @@ export default function Login() {
         flexDirection: "column",
       }}
     >
-      <h1>Login</h1>
+      <h1 className="text-center fw-bolder mb-4">Login</h1>
       <form className="formulario login">
         <div className="mb-3">
           <label htmlFor="formGroupExampleInput" className="form-label">
@@ -21,7 +21,7 @@ export default function Login() {
           <input
             type="text"
             className="form-control"
-            style={{ width: "300px" }}
+            style={{ width: "100%", maxWidth: "500px" }}
             id="formGroupExampleInput"
             placeholder="Digite seu Email"
           />
