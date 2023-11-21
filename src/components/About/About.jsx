@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./About.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
@@ -6,6 +6,13 @@ import Card from "react-bootstrap/Card";
 import Luan from "../../assets/About/Luan.png";
 
 export default function About() {
+  const userData = JSON.parse(localStorage.getItem("userData"))?.[0];
+
+  useEffect(() => {
+    if (!userData) {
+      window.location.href = "/";
+    }
+  }, []);
   return (
     <div>
       <h1 className="text-center fw-bolder mb-4">Conheça nosso time</h1>

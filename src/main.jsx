@@ -8,6 +8,7 @@ import Home from "./components/Home/Home.jsx";
 import About from "./components/About/About.jsx";
 import Login from "./components/Login/Login.jsx";
 import SignIn from "./components/SignIn/SignIn.jsx";
+import Perfil from "./components/Perfil/Perfil.jsx";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
+        element: <Login />,
+      },
+      {
+        path: "home",
         element: <Home />,
       },
       {
@@ -23,13 +28,13 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: "login",
-        element: <Login />,
-      },
-      {
         path: "signIn",
         element: <SignIn />,
-      }
+      },
+      {
+        path: "perfil",
+        element: <Perfil />,
+      },
     ],
   },
 ]);

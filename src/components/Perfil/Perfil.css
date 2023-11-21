@@ -1,0 +1,16 @@
+.dados {
+  display: flex;
+  color: rgb(212, 212, 212);
+  font-size: 20px;
+}
+.area {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(70, 70, 70);
+  padding: 20px;
+  border-radius: 5px;
+  @media screen {
+    max-width: 400px;
+    min-width: 200px;
+  }
+}

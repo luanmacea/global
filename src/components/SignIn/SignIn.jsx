@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./SignIn.css";
 import {
   cadastrarUsuario,
@@ -13,6 +13,13 @@ export default function SignIn() {
   const [telefone, setTelefone] = useState("");
   const [password, setPassword] = useState("");
   const [verify, setVerify] = useState("");
+  const userData = JSON.parse(localStorage.getItem("userData"))?.[0];
+
+  useEffect(() => {
+    if (userData) {
+      window.location.href = "/home";
+    }
+  }, []);
 
   const emailRegExp = /\S+@\S+\.\S{3,}/;
 
@@ -170,7 +177,7 @@ export default function SignIn() {
         <div className="mb-4">
           <label htmlFor="formGroupExampleInput2" className="form-label">
             Não possui cadastro?
-            <a href="login"> Clique aqui</a>
+            <a href="/"> Clique aqui</a>
           </label>
         </div>
         <button

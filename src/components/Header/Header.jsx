@@ -32,31 +32,41 @@ export default function Header() {
     <div className="header">
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="/">
-            <img className="logo" src={LogoGlobal} alt="logo" />
-            MedSync
-          </Navbar.Brand>
+          {!visivel && (
+            <Navbar.Brand href="home">
+              <img className="logo" src={LogoGlobal} alt="logo" />
+              MedSync
+            </Navbar.Brand>
+          )}
+          {visivel && (
+            <Navbar.Brand href="">
+              <img className="logo" src={LogoGlobal} alt="logo" />
+              MedSync
+            </Navbar.Brand>
+          )}
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse
-            className="justify-content-center"
-            id="basic-navbar-nav"
-          >
-            <Nav className="ms-auto">
-              <Nav.Link className="" href="/">
-                Home
-              </Nav.Link>
-              <Nav.Link className="" href="about">
-                Sobre nós
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
+          {!visivel && (
+            <Navbar.Collapse
+              className="justify-content-center"
+              id="basic-navbar-nav"
+            >
+              <Nav className="ms-auto">
+                <Nav.Link className="" href="home">
+                  Home
+                </Nav.Link>
+                <Nav.Link className="" href="about">
+                  Sobre nós
+                </Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          )}
           <Navbar.Collapse
             className="justify-content-end"
             id="basic-navbar-nav"
           >
             <Nav className="">
               {visivel && (
-                <Nav.Link className="TextLogin" href="login">
+                <Nav.Link className="TextLogin" href="/">
                   Login
                 </Nav.Link>
               )}
@@ -67,6 +77,8 @@ export default function Header() {
               )}
               {!visivel && (
                 <NavDropdown title="Perfil" id="basic-nav-dropdown">
+                  <NavDropdown.Item href="perfil">Conta</NavDropdown.Item>
+                  <NavDropdown.Divider />
                   <NavDropdown.Item href="/" onClick={handleClick}>
                     Sair
                   </NavDropdown.Item>

@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Home.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
 export default function Home() {
+  const userData = JSON.parse(localStorage.getItem("userData"))?.[0];
+
+  useEffect(() => {
+    if (!userData) {
+      window.location.href = "/";
+    }
+  }, []);
   const handleClick = () => {
     console.log("clicou");
     console.log("Local storage:", localStorage.getItem("userData"));
-    localStorage.clear();
   };
   return (
     <div>

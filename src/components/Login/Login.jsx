@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Login.css";
 import { validarUsuario } from "../../services/requests/users";
 import { useNavigate } from "react-router-dom";
@@ -7,7 +7,13 @@ export default function Login() {
   const Navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const userData = JSON.parse(localStorage.getItem("userData"))?.[0];
 
+  useEffect(() => {
+    if (userData) {
+      window.location.href = "/home";
+    }
+  }, []);
   function validarFormulario() {
     if (email === "" || password === "") {
       alert("Por favor, preencha todos os campos");
