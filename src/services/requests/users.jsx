@@ -7,7 +7,7 @@ export async function cadastrarUsuario(data) {
       name: data.nome,
       phone: data.telefone,
       email: data.email,
-      password: data.senha,
+      senha: data.senha,
     });
     return "Cadastrado!";
   } catch (error) {
@@ -29,10 +29,7 @@ export async function verificarEmailRepetido(novoEmail) {
 
 export async function validarUsuario(email, senha) {
   try {
-    const response = await api.post("/login/", {
-      email: email,
-      password: senha,
-    });
+    const response = await api.get(`/usuarios?email=${email}&senha=${senha}`);
     return response.data;
   } catch (error) {
     return error;

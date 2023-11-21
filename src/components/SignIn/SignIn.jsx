@@ -4,8 +4,10 @@ import {
   cadastrarUsuario,
   verificarEmailRepetido,
 } from "../../services/requests/users";
+import { useNavigate } from "react-router-dom";
 
 export default function SignIn() {
+  const navigate = useNavigate();
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [telefone, setTelefone] = useState("");
@@ -79,6 +81,7 @@ export default function SignIn() {
     const response = await cadastrarUsuario(novoUsuario);
     if (response === "Cadastrado!") {
       alert("Cadastrado com sucesso!");
+      navigate("/login");
     } else {
       alert(response);
     }

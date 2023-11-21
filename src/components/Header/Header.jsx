@@ -1,12 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Header.css";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
 
 import LogoGlobal from "../../assets/logoGlobal.png";
 
 export default function Header() {
+  const [visivel, setVisivel] = useState(true);
+
+  const userData = JSON.parse(localStorage.getItem("userData"));
+
+  useEffect(() => {
+    if (!userData) {
+      return;
+    }
+    setVisivel(false);
+  }, [userData]);
+
+  const handleClick = () => {
+    const confirmacao = window.confirm("Tem certeza que deseja sair?");
+    if (!confirmacao) {
+      return;
+    }
+    localStorage.clear();
+    window.location.reload();
+  };
+
   return (
     <div className="header">
       <Navbar expand="lg" className="bg-body-tertiary">
@@ -34,12 +55,23 @@ export default function Header() {
             id="basic-navbar-nav"
           >
             <Nav className="">
-              <Nav.Link className="TextLogin" href="login">
-                Login
-              </Nav.Link>
-              <Nav.Link className="TextSignIn" href="signIn">
-                SignIn
-              </Nav.Link>
+              {visivel && (
+                <Nav.Link className="TextLogin" href="login">
+                  Login
+                </Nav.Link>
+              )}
+              {visivel && (
+                <Nav.Link className="TextSignIn" href="signIn">
+                  SignIn
+                </Nav.Link>
+              )}
+              {!visivel && (
+                <NavDropdown title="Perfil" id="basic-nav-dropdown">
+                  <NavDropdown.Item href="/" onClick={handleClick}>
+                    Sair
+                  </NavDropdown.Item>
+                </NavDropdown>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>

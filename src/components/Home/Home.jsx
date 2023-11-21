@@ -4,6 +4,11 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
 export default function Home() {
+  const handleClick = () => {
+    console.log("clicou");
+    console.log("Local storage:", localStorage.getItem("userData"));
+    localStorage.clear();
+  };
   return (
     <div>
       <div className="jumbotron">
@@ -19,7 +24,12 @@ export default function Home() {
           It uses utility classes for typography and spacing to space content
           out within the larger container.
         </p>
-        <a className="btn btn-primary btn-lg" href="#" role="button">
+        <a
+          className="btn btn-primary btn-lg"
+          href="#"
+          role="button"
+          onClick={handleClick}
+        >
           Learn more
         </a>
       </div>
