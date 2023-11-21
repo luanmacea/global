@@ -21,7 +21,11 @@ Rode o projeto:
 # Usuário de teste
 
 id: 2,
+
 nome: "admin",
+
 email: "admin@admin.com",
+
 telefone: "11911111111",
+
 senha: "admin"
