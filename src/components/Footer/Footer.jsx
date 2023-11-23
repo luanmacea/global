@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Footer.css";
 
 export default function Footer() {
+  const [visivel, setVisivel] = useState(true);
+
+  const userData = JSON.parse(localStorage.getItem("userData"));
+
+  useEffect(() => {
+    if (!userData) {
+      return;
+    }
+    setVisivel(false);
+  }, [userData]);
   return (
     <div className="Container py-4 px-3">
       <div className="apresentacao mx-3">
@@ -18,14 +28,22 @@ export default function Footer() {
         <p>Disque Denuncia - 181</p>
         <p>Defesa Civial - 199</p>
       </div>
-      <div className="ajustes mx-5">
-        <h3>Páginas</h3>
-        <div className="links d-flex justify-content-around flex-column">
-          <a className="mb-3 link-dark" href="/home">Home</a>
-          <a className="mb-3 link-dark" href="/about">Sobre o grupo</a>
-          <a className="mb-3 link-dark" href="/perfil">Conta</a>
+      {!visivel && (
+        <div className="ajustes mx-5">
+          <h3>Páginas</h3>
+          <div className="links d-flex justify-content-around flex-column">
+            <a className="mb-3 link-dark" href="/home">
+              Home
+            </a>
+            <a className="mb-3 link-dark" href="/about">
+              Sobre o grupo
+            </a>
+            <a className="mb-3 link-dark" href="/perfil">
+              Conta
+            </a>
+          </div>
         </div>
-      </div>
+      )}
       <div className="ajustes mx-5">
         <h3>Parceiros</h3>
         <p>Fiap</p>
