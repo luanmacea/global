@@ -4,7 +4,7 @@ import "./Footer.css";
 export default function Footer() {
   return (
     <div className="Container py-4 px-3">
-      <div className="apresentacao mx-4">
+      <div className="apresentacao mx-3">
         <h1 className="title d-flex justify-content-center">MedSync</h1>
         <p className="text text-center align-content-around w-75">
           Um sistema para salvar vidas em ermegencia
