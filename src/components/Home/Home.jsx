@@ -16,7 +16,7 @@ export default function Home() {
     console.log("Local storage:", localStorage.getItem("userData"));
   };
   return (
-    <div>
+    <div >
       <div className="jumbotron">
         <h1 className="titulo">Faça e depois pergunte</h1>
         <p className="descricao mb-5">
@@ -53,9 +53,9 @@ export default function Home() {
               <Card.Title className="">Agilidade</Card.Title>
             </div>
             <Card.Text className="text p-1">
-              Oi, tenho 19 anos e meu nome é Luan. Estou atualmente cursando
-              Engenharia de Software e estou ansioso para aprender mais nesse
-              campo fascinante da tecnologia.
+              Agilidade redefinida para acesso instantâneo e eficiente às
+              informações médicas essenciais. Simplifique e acelere o cuidado de
+              saúde.
             </Card.Text>
             <Button variant="primary">Go somewhere</Button>
           </Card.Body>
@@ -72,9 +72,9 @@ export default function Home() {
               <Card.Title className="">Facilidade</Card.Title>
             </div>
             <Card.Text className="text p-1">
-              Oi, tenho 19 anos e meu nome é Luan. Estou atualmente cursando
-              Engenharia de Software e estou ansioso para aprender mais nesse
-              campo fascinante da tecnologia.
+              MedSync simplifica o cuidado de saúde, permitindo que você entre
+              no hospital sem se preocupar com detalhes complicados, graças ao
+              acesso fácil ao seu histórico médico.
             </Card.Text>
             <Button variant="primary">Go somewhere</Button>
           </Card.Body>
@@ -90,9 +90,9 @@ export default function Home() {
               <Card.Title className="">Intuitivo</Card.Title>
             </div>
             <Card.Text className="text p-1">
-              Oi, tenho 19 anos e meu nome é Luan. Estou atualmente cursando
-              Engenharia de Software e estou ansioso para aprender mais nesse
-              campo fascinante da tecnologia.
+              MedSync, o seu parceiro intuitivo em saúde, proporciona uma
+              experiência simplificada e fácil, tornando o acesso às informações
+              médicas uma jornada natural e eficaz.
             </Card.Text>
             <Button variant="primary">Go somewhere</Button>
           </Card.Body>
