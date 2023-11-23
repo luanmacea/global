@@ -48,9 +48,7 @@ export default function Footer() {
         <h3>Parceiros</h3>
         <p>Fiap</p>
         <p>Hapdive</p>
-        <p>SAMU - 192</p>
-        <p>Disque Denuncia - 181</p>
-        <p>Defesa Civial - 199</p>
+        <p>Pé da Água</p>
       </div>
     </div>
   );
