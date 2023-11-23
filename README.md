@@ -20,7 +20,7 @@ Rode o projeto:
 
 # Usuário de teste
 
-id: 2,
+id: 1,
 
 nome: "admin",
 
