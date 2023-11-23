@@ -88,7 +88,7 @@ export default function SignIn() {
     const response = await cadastrarUsuario(novoUsuario);
     if (response === "Cadastrado!") {
       alert("Cadastrado com sucesso!");
-      navigate("/login");
+      navigate("/");
     } else {
       alert(response);
     }

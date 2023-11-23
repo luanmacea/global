@@ -2,31 +2,17 @@
   "usuarios": [
     {
       "id": 1,
-      "nome": "Luan Silveira Macea",
-      "email": "luancoisas@gmail.com",
-      "telefone": "11911111111",
-      "senha": "123456"
-    },
-    {
-      "id": 2,
       "nome": "admin",
       "email": "admin@admin.com",
       "telefone": "11911111111",
       "senha": "admin"
     },
     {
-      "id": 3,
-      "nome": "a",
+      "name": "luan",
+      "phone": "11999999999",
       "email": "a",
-      "telefone": "11911111111",
-      "senha": "a"
-    },
-    {
-      "name": "logan",
-      "phone": "1234567890",
-      "email": "ala@hua.kbar",
-      "password": "aaaaaa",
-      "id": 4
+      "senha": "a",
+      "id": 2
     }
   ]
 }
