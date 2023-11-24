@@ -11,6 +11,8 @@ export default function About() {
 
 	useEffect(() => {
 		if (!userData) {
+			// Usuario não esta logado?
+			// Redirecionar para o login
 			window.location.href = "/";
 		}
 	}, []);

@@ -2,38 +2,40 @@ import React, { useEffect } from "react";
 import "./Perfil.css";
 
 export default function Perfil() {
-  const userData = JSON.parse(localStorage.getItem("userData"))?.[0];
+	const userData = JSON.parse(localStorage.getItem("userData"))?.[0];
 
-  useEffect(() => {
-    if (!userData) {
-      window.location.href = "/";
-    }
-  }, []);
+	useEffect(() => {
+		if (!userData) {
+			// Usuario não esta logado?
+			// Redirecionar para o login
+			window.location.href = "/";
+		}
+	}, []);
 
-  const handleClick = () => {
-    console.log("local: ", userData);
-  };
-  return (
-    <div
-      style={{
-        margin: "20px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-      }}
-    >
-      <h1 className="text-center fw-bolder mb-4">Seu Perfil</h1>
-      <div className="card_container area">
-        <label className="dados m-1">Id: {userData?.id}</label>
-        <label className="dados m-1">Nome: {userData?.name}</label>
-        <label className="dados m-1">Email: {userData?.email}</label>
-        <label className="dados m-1">Telefone: {userData?.phone}</label>
-        <label className="dados m-1">Senha: {userData?.senha}</label>
-      </div>
-      {/* <button className="btn btn-primary" onClick={handleClick}>
+	const handleClick = () => {
+		console.log("local: ", userData);
+	};
+	return (
+		<div
+			style={{
+				margin: "20px",
+				display: "flex",
+				justifyContent: "center",
+				alignItems: "center",
+				flexDirection: "column",
+			}}
+		>
+			<h1 className="text-center fw-bolder mb-4">Seu Perfil</h1>
+			<div className="card_container area">
+				<label className="dados m-1">Id: {userData?.id}</label>
+				<label className="dados m-1">Nome: {userData?.name}</label>
+				<label className="dados m-1">Email: {userData?.email}</label>
+				<label className="dados m-1">Telefone: {userData?.phone}</label>
+				<label className="dados m-1">Senha: {userData?.senha}</label>
+			</div>
+			{/* <button className="btn btn-primary" onClick={handleClick}>
         Clique
       </button> */}
-    </div>
-  );
+		</div>
+	);
 }

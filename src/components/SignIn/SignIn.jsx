@@ -18,6 +18,8 @@ export default function SignIn() {
 
 	useEffect(() => {
 		if (userData) {
+			// Usuário logado?
+			// Redirecionar para a home
 			window.location.href = "/home";
 		}
 	}, []);
