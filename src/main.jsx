@@ -11,36 +11,34 @@ import SignIn from "./components/SignIn/SignIn.jsx";
 import Perfil from "./components/Perfil/Perfil.jsx";
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    children: [
-      {
-        path: "/",
-        element: <Login />,
-      },
-      {
-        path: "home",
-        element: <Home />,
-      },
-      {
-        path: "about",
-        element: <About />,
-      },
-      {
-        path: "signIn",
-        element: <SignIn />,
-      },
-      {
-        path: "perfil",
-        element: <Perfil />,
-      },
-    ],
-  },
+	{
+		path: "/",
+		element: <App />,
+		children: [
+			{
+				path: "/",
+				element: <Login />,
+			},
+			{
+				path: "home",
+				element: <Home />,
+			},
+			{
+				path: "about",
+				element: <About />,
+			},
+			{
+				path: "signIn",
+				element: <SignIn />,
+			},
+			{
+				path: "perfil",
+				element: <Perfil />,
+			},
+		],
+	},
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+	<RouterProvider router={router} />
 );
