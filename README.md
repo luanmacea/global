@@ -1,31 +1,17 @@
 # Integrantes
-
-Nome: Gabriel Machado Belardino
-RM: 550121
-
-Nome: Luan Silveira Macea
-RM: 98290
+|Nome|RM|
+|:--:|:--:|
+|Gabriel Machado Belardino|550121|
+|Luan Silveira Macea|98290|
 
 # Como iniciar o projeto
 
-Primeiro baixe as dependências:
-"npm install"
+1. Primeiro baixe as dependências: `npm install`
+2. Abrar um terminal e digite: `npm run backend`
+3. Abrar outro terminal e digite: `npm run dev`
 
-Abra o terminal e digite:
-"npm run backend"
-Para executar o JSON-SERVER
+# Login para teste
+|Email|Senha|
+|:---:|:---:|
+|admin@admin.com|admin|
 
-Rode o projeto:
-"npm run dev"
-
-# Usuário de teste
-
-id: 1,
-
-nome: "admin",
-
-email: "admin@admin.com",
-
-telefone: "11911111111",
-
-senha: "admin"

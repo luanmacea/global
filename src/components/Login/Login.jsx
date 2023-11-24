@@ -42,7 +42,7 @@ export default function Login() {
 
 	return (
 		<div className="login-container">
-			<h1 className="text-center fw-bolder mb-4">Login</h1>
+			<h1 className="text-center fw-bolder m-4">Login</h1>
 			<form className="formulario login">
 				<div className="mb-3">
 					<label htmlFor="formGroupExampleInput" className="form-label">
