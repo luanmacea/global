@@ -90,7 +90,7 @@ export default function SignIn() {
 	};
 	return (
 		<div className="singIn-container">
-			<h1 className="text-center fw-bolder mb-4">Cadastro</h1>
+			<h1 className="text-center fw-bolder m-4">Cadastro</h1>
 			<form className="formulario login ">
 				<div className="mb-1">
 					<label htmlFor="formGroupExampleInput" className="form-label">
