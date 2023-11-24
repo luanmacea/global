@@ -5,67 +5,75 @@ $linkColor: #333230;
 $font: "Open Sans", sans-serif;
 
 .Container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	background-color: $footerBackgroundColor;
-	padding: 20px;
-	color: $textColor;
-	font-family: $font;
-
-	.apresentacao {
-		flex: 1;
-		max-width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: $footerBackgroundColor;
+  padding: 20px;
+  color: $textColor;
+  font-family: $font;
+}
+@media screen and (max-width: 768px) {
+	.Container {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
-
-		.title {
-			font-size: 24px;
-			margin-bottom: 10px;
-			color: $titleColor;
-		}
-
-		.text {
-			font-size: 14px;
-			text-align: center;
-		}
 	}
-
 	.ajustes {
-		flex: 1;
-		max-width: 200px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-
-		h3 {
-			font-size: 18px;
-			margin-bottom: 10px;
-			color: $titleColor; // Cor laranja mais escura
-		}
-
-		p {
-			font-size: 14px;
-		}
-
-		.links {
-			display: flex;
-			flex-direction: column;
-
-			a {
-				color: #ff8c00; // Cor laranja mais escura para os links
-				text-decoration: none;
-
-				&:hover {
-					&::before {
-						content: ">";
-						margin-right: 5px;
-					}
-					text-decoration: underline;
-				}
-			}
-		}
+		margin-top: 20px;
 	}
+}
+.apresentacao {
+  flex: 1;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: $titleColor;
+}
+
+.text {
+  font-size: 14px;
+  text-align: center;
+}
+
+.ajustes {
+  flex: 1;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: $titleColor; // Cor laranja mais escura
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+
+    a {
+      color: #ff8c00; // Cor laranja mais escura para os links
+      text-decoration: none;
+
+      &:hover {
+        &::before {
+          content: ">";
+          margin-right: 5px;
+        }
+        text-decoration: underline;
+      }
+    }
+  }
 }
