@@ -5,6 +5,7 @@ import {
   verificarEmailRepetido,
 } from "../../services/requests/users";
 import { useNavigate } from "react-router-dom";
+import InputMask from 'react-input-mask';
 
 export default function SignIn() {
   const navigate = useNavigate();
@@ -26,7 +27,7 @@ export default function SignIn() {
   const validarFormulario = () => {
     if (
       nome === "" ||
-      telefone === "" ||
+      // telefone === "" ||
       email === "" ||
       password === "" ||
       verify === ""
@@ -41,9 +42,9 @@ export default function SignIn() {
     } else if (nome.length < 2 || nome.length > 30) {
       alert("O campo nome não atingiu o número mínimo de caracteres.");
       return false;
-    } else if (telefone.length < 10 || telefone.length > 11) {
-      alert("Digite um telefone válido (Utilize DDD).");
-      return false;
+    // } else if (telefone.length < 10 || telefone.length > 11) {
+    //   alert("Digite um telefone válido (Utilize DDD).");
+    //   return false;
     } else if (password.length < 6) {
       alert("A senha deve ter no mínimo 6 digitos.");
       return false;
@@ -88,7 +89,7 @@ export default function SignIn() {
     const response = await cadastrarUsuario(novoUsuario);
     if (response === "Cadastrado!") {
       alert("Cadastrado com sucesso!");
-      navigate("/login");
+      navigate("/");
     } else {
       alert(response);
     }
@@ -113,7 +114,6 @@ export default function SignIn() {
             type="text"
             className="form-control me-5 mb-2"
             style={{ width: "100%" }}
-            // id="formGroupExampleInput"
             placeholder="Digite seu Nome"
             value={nome}
             onChange={(e) => setNome(e.target.value)}
@@ -126,7 +126,6 @@ export default function SignIn() {
           <input
             type="text"
             className="form-control me-5 mb-2"
-            // id="formGroupExampleInput2"
             placeholder="Digite sua Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -134,10 +133,11 @@ export default function SignIn() {
         </div>
         <div className="mb-1">
           <label htmlFor="formGroupExampleInput" className="form-label">
-            Telefone:
+            Telefone: (Opcional)
           </label>
-          <input
+          <InputMask
             type="text"
+            mask="(99) 99999-9999"
             className="form-control me-5 mb-2"
             style={{ width: "100%" }}
             // id="formGroupExampleInput"

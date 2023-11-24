@@ -48,6 +48,7 @@ export default function Login() {
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
+        paddingBottom: "80px",
       }}
     >
       <h1 className="text-center fw-bolder mb-4">Login</h1>

@@ -26,9 +26,9 @@ export default function Perfil() {
       <h1 className="text-center fw-bolder mb-4">Seu Perfil</h1>
       <div className="card_container area">
         <label className="dados m-1">Id: {userData?.id}</label>
-        <label className="dados m-1">Nome: {userData?.nome}</label>
+        <label className="dados m-1">Nome: {userData?.name}</label>
         <label className="dados m-1">Email: {userData?.email}</label>
-        <label className="dados m-1">Telefone: {userData?.telefone}</label>
+        <label className="dados m-1">Telefone: {userData?.phone}</label>
         <label className="dados m-1">Senha: {userData?.senha}</label>
       </div>
       {/* <button className="btn btn-primary" onClick={handleClick}>

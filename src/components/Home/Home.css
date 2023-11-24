@@ -1,3 +1,6 @@
+.fundo {
+  background-color: rgb(245, 245, 245);
+}
 .jumbotron {
   color: #fff;
   font-weight: 700;
@@ -15,4 +18,31 @@
 .descricao {
   font-size: 20px;
   font-weight: 300;
+}
+.sobre {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.sobre_text {
+  margin: 20px;
+  padding: 20px;
+  font-size: 17px;
+  background-color: whitesmoke;
+  border-radius: 20px;
+  width: 40vw;
+}
+.sobre_title {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  .sobre {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
 }
