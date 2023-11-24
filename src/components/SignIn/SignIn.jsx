@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import "./SignIn.css";
+import "./SignIn.scss";
 import {
   cadastrarUsuario,
   verificarEmailRepetido,
 } from "../../services/requests/users";
 import { useNavigate } from "react-router-dom";
-import InputMask from 'react-input-mask';
+import InputMask from "react-input-mask";
 
 export default function SignIn() {
   const navigate = useNavigate();
@@ -42,9 +42,9 @@ export default function SignIn() {
     } else if (nome.length < 2 || nome.length > 30) {
       alert("O campo nome não atingiu o número mínimo de caracteres.");
       return false;
-    // } else if (telefone.length < 10 || telefone.length > 11) {
-    //   alert("Digite um telefone válido (Utilize DDD).");
-    //   return false;
+      // } else if (telefone.length < 10 || telefone.length > 11) {
+      //   alert("Digite um telefone válido (Utilize DDD).");
+      //   return false;
     } else if (password.length < 6) {
       alert("A senha deve ter no mínimo 6 digitos.");
       return false;
@@ -95,17 +95,9 @@ export default function SignIn() {
     }
   };
   return (
-    <div
-      style={{
-        margin: "20px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-      }}
-    >
-      <h1 className="text-center fw-bolder mb-4">Cadastro</h1>
-      <form className="formulario login ">
+    <div className="login-container">
+      <h1 className="text-center fw-bolder m-4">Cadastro</h1>
+      <form className="formulario login">
         <div className="mb-1">
           <label htmlFor="formGroupExampleInput" className="form-label">
             Nome:
